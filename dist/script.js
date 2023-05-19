@@ -557,6 +557,59 @@ function hmrAccept(bundle, id) {
 }
 
 },{}],"6rimH":[function(require,module,exports) {
+//Importing module
+var _shoppingCartJs = require("./shoppingCart.js");
+console.log("Importing module");
+console.log((0, _shoppingCartJs.shippingCost));
+(0, _shoppingCartJs.add_to_cart)("car", 1);
+console.log((0, _shoppingCartJs.total_cost), (0, _shoppingCartJs.total_quantity));
+
+},{"./shoppingCart.js":"l6bJl"}],"l6bJl":[function(require,module,exports) {
+//Exporting module
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "shippingCost", ()=>shippingCost);
+parcelHelpers.export(exports, "add_to_cart", ()=>add_to_cart);
+parcelHelpers.export(exports, "total_cost", ()=>total_cost);
+parcelHelpers.export(exports, "total_quantity", ()=>total_quantity);
+console.log("Exporting module");
+const shippingCost = 10;
+const cart = [];
+const add_to_cart = function(product, quantity) {
+    console.log(`${quantity} ${product} added to cart`);
+};
+const total_cost = 30;
+const total_quantity = 2;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["dpgAG","6rimH"], "6rimH", "parcelRequire853d")
 

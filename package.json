@@ -4,8 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel script.js"
+    "start": "parcel script.js",
+    "build": "parcel build script.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "url": "https://github.com/akash457353564/js_modules/issues"
   },
   "homepage": "https://github.com/akash457353564/js_modules#readme",
-  "dependencies": {
+  "devDependencies": {
     "parcel": "^2.8.3"
   }
 }
